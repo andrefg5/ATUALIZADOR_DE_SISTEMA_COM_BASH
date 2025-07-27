@@ -65,4 +65,4 @@ seu_usuario ALL=(ALL) NOPASSWD: /usr/bin/apt, /usr/bin/apt-get, /usr/bin/snap re
 
 ---
 
-Após isso, tudo estará pronto para funcionar automaticamente sem intervenção manual. ✅
+Após isso, tudo estará pronto para funcionar automaticamente sem intervenção manual. 
