@@ -4,7 +4,7 @@ Para rodar ele automaticamente, recomendo que siga os passos abaixo:
 
 ---
 
-### ✅ 1. Dê permissão de execução ao script:
+###  1. Dê permissão de execução ao script:
 
 ```bash
 chmod +x /home/seu_usuario/atualizar_sistema.sh
@@ -15,7 +15,7 @@ chmod +x /home/seu_usuario/atualizar_sistema.sh
 
 ---
 
-### ✅ 2. Agende o script no **crontab como root**:
+###  2. Agende o script no **crontab como root**:
 
 ```bash
 sudo crontab -e
@@ -25,7 +25,7 @@ Escolha o editor de texto da sua preferência. Se for iniciante, escolha o **nan
 
 ---
 
-### ✅ 3. Adicione a linha abaixo no final do arquivo para agendar a execução diária às 3 da manhã:
+###  3. Adicione a linha abaixo no final do arquivo para agendar a execução diária às 3 da manhã:
 
 ```bash
 0 3 * * * /diretorio_do_arquivo/arquivo.sh
@@ -39,7 +39,7 @@ pwd
 
 ---
 
-### ✅ 4. Verifique se o agendamento foi salvo corretamente:
+###  4. Verifique se o agendamento foi salvo corretamente:
 
 ```bash
 sudo crontab -l
@@ -49,7 +49,7 @@ Se a linha que você adicionou aparecer, está funcionando corretamente.
 
 ---
 
-### ✅ 5. (Opcional) Permitir que certos comandos rodem **sem pedir senha**, para o processo ser totalmente automático:
+###  5. Permitir que certos comandos rodem **sem pedir senha**, para o processo ser totalmente automático:
 
 Abra o arquivo seguro do `sudo`:
 
