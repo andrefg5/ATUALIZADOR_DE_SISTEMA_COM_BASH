@@ -54,9 +54,3 @@ fi #fim do "if".
 if command -v snap &>/dev/null; then #se "snap" instalado, atualise, se não estiver nada é execultado.
     sudo snap refresh
 fi #fim do "if".
-
-echo "Sistema totalmente atualizado e limpo." # Apenas imprime uma mensagem (equivalente ao "print()" em Python ou "printf();" em C).
-
-sleep 2 # Pausa por 2 segundos para dar tempo de ler a mensagem final.
-
-exit # Encerra o emulador de terminal.
