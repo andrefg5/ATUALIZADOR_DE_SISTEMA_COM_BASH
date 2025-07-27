@@ -30,3 +30,15 @@ verifique o agendamento:
 sudo crontab -l
 
 se apareceder ao final o comando adicionado está funcionando.
+
+para que o seu usuario não tenha que inserir a senha nestes comandos, oque permite atualizar sem a sua intervenção, faça isso:
+
+sudo visudo 
+
+visudo é o arquivo de configuração do sudo com segurança
+
+no final adicione isso:
+
+seu_usuario ALL=(ALL) NOPASSWD: /usr/bin/apt, /usr/bin/apt-get, /usr/bin/snap refresh
+
+subistutua o "seu_usuario" pelo nome do seu usuario, após isso tudo está pronto para funcionar automaticamente.
