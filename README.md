@@ -1,44 +1,68 @@
-ATUALIZADOR_DE_SISTEMA_COM_BASH
+# ATUALIZADOR_DE_SISTEMA_COM_BASH
 
-para rodar ele altomaticamente eu recomendo que faça isso:
+Para rodar ele automaticamente, recomendo que siga os passos abaixo:
 
-de permição de execulção: 
+---
 
+### ✅ 1. Dê permissão de execução ao script:
+
+```bash
 chmod +x /home/seu_usuario/atualizar_sistema.sh
+```
 
-chmod = change mode, altera permição de arquivo
-+x = adiciona eXeculção.
+> `chmod` = *change mode*, altera permissões de arquivos  
+> `+x` = adiciona permissão de e**x**ecução
 
-execulte o crontsb como root:
+---
 
+### ✅ 2. Agende o script no **crontab como root**:
+
+```bash
 sudo crontab -e
+```
 
-após isso escolha o editor de texto de sua preferencia, se vc for iniciante use o NANO, ele é o mais simples.
+Escolha o editor de texto da sua preferência. Se for iniciante, escolha o **nano** (mais simples).
 
-coloque a hora de execulção:
+---
 
-no arquivo adicione isso: 0 3 * * * /diretorio_do_arquivo/arquivo.sh
+### ✅ 3. Adicione a linha abaixo no final do arquivo para agendar a execução diária às 3 da manhã:
 
-para saber o entereço entre no diretorio do código e execulte o comando "pwd".
+```bash
+0 3 * * * /diretorio_do_arquivo/arquivo.sh
+```
 
-isso faz com que o código seja execultado diariamente as 3 da manha.
+> Para saber o caminho completo (`/diretorio_do_arquivo/arquivo.sh`), entre no diretório do script e use o comando abaixo para descobrir:
 
-após isso saia:
+```bash
+pwd
+```
 
-verifique o agendamento:
+---
 
+### ✅ 4. Verifique se o agendamento foi salvo corretamente:
+
+```bash
 sudo crontab -l
+```
 
-se apareceder ao final o comando adicionado está funcionando.
+Se a linha que você adicionou aparecer, está funcionando corretamente.
 
-para que o seu usuario não tenha que inserir a senha nestes comandos, oque permite atualizar sem a sua intervenção, faça isso:
+---
 
-sudo visudo 
+### ✅ 5. (Opcional) Permitir que certos comandos rodem **sem pedir senha**, para o processo ser totalmente automático:
 
-visudo é o arquivo de configuração do sudo com segurança
+Abra o arquivo seguro do `sudo`:
 
-no final adicione isso:
+```bash
+sudo visudo
+```
 
+No final do arquivo, adicione a seguinte linha (substitua `seu_usuario` pelo seu nome de usuário real):
+
+```bash
 seu_usuario ALL=(ALL) NOPASSWD: /usr/bin/apt, /usr/bin/apt-get, /usr/bin/snap refresh
+```
 
-subistutua o "seu_usuario" pelo nome do seu usuario, após isso tudo está pronto para funcionar automaticamente.
+---
+
+Após isso, tudo estará pronto para funcionar automaticamente sem intervenção manual. ✅
