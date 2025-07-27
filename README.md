@@ -28,13 +28,7 @@ Escolha o editor de texto da sua preferência. Se for iniciante, escolha o **nan
 ###  3. Adicione a linha abaixo no final do arquivo para agendar a execução diária às 3 da manhã:
 
 ```bash
-0 3 * * * arquivo.sh
-```
-
-> Para saber o caminho completo (`/diretorio_do_arquivo/arquivo.sh`), entre no diretório do script e use o comando abaixo para descobrir:
-
-```bash
-pwd
+0 3 * * * /usr/local/bin/arquivo.sh
 ```
 
 ---
